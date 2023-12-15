@@ -11,8 +11,8 @@
 #define ETH_HEADER_LEN 14
 
 struct ETHERNET_HEADER {
-	uint8_t source_mac[6];
 	uint8_t destination_mac[6];
+	uint8_t source_mac[6];
 	uint16_t type;
 } __attribute__((packed));
 
@@ -61,15 +61,6 @@ int main()
 		}
 
 		printf("++++++++++ETHERNET HEADER+++++++++++++++\n");
-		printf("+ source_mac      : %02X:%02X:%02X:%02X:%02X:%02X\n",
-			eth_header->source_mac[0],
-			eth_header->source_mac[1],
-			eth_header->source_mac[2],
-			eth_header->source_mac[3],
-			eth_header->source_mac[4],
-			eth_header->source_mac[5]
-			);
-
 		printf("+ destination_mac : %02X:%02X:%02X:%02X:%02X:%02X\n",
                         eth_header->destination_mac[0],
                         eth_header->destination_mac[1],
@@ -78,6 +69,15 @@ int main()
                         eth_header->destination_mac[4],
                         eth_header->destination_mac[5]
                         );
+
+		printf("+ source_mac      : %02X:%02X:%02X:%02X:%02X:%02X\n",
+			eth_header->source_mac[0],
+			eth_header->source_mac[1],
+			eth_header->source_mac[2],
+			eth_header->source_mac[3],
+			eth_header->source_mac[4],
+			eth_header->source_mac[5]
+			);
 
 		printf("+ type            : %x\n",
 			ntohs(eth_header->type));

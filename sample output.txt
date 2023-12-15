@@ -1,0 +1,22 @@
+ratish:gcc read_arp.c -o read_arp
+ratish:~/read_arp_msg$ sudo ./read_arp 
+[sudo] password for ratish: 
+
+++++++++++++++++++++++ Waiting for ARP packets +++++++++++++++++++++++++
+++++++++++ETHERNET HEADER+++++++++++++++
++ destination_mac : FF:FF:FF:FF:FF:FF
++ source_mac      : E8:65:D4:AA:5A:38
++ type            : 806
+++++++++++++++++++++++++++++++++++++++++
++++++++++++++++ARP HEADER+++++++++++++++
++ Hardware type   : 1
++ Protocol type   : 2048
++ Hardware length : 1536
++ Protocol length : 1024
++ Opcode          : 1
++ Sender Mac      : E8:65:D4:AA:5A:38
++ Sender Ip       : 192.168.0.1
++ target Mac      : 00:00:00:00:00:00
++ Target IP       : 192.168.0.102
+++++++++++++++++++++++++++++++++++++++++
+
